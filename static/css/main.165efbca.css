@@ -1,0 +1,474 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap);
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #1c1d23 !important;
+    font-family: Poppins !important;
+    margin: 0;
+    word-break: break-word
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
+}
+
+.swiper {
+    height: 100%;
+    width: 100%
+}
+
+.swiper-slide {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.logo-animation {
+    text-fill-color: #0000;
+    -webkit-text-fill-color: #0000;
+    animation: shine 1.5s linear infinite;
+    background: linear-gradient(90deg, #c540ca 20%, #8126cb 40%, #fff 60%, #ffd507 80%, #ff6330);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    color: #fff;
+    color: #000;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+    margin-bottom: 10px
+}
+
+.title-animation {
+    animation: animated-gradient 2s infinite alternate-reverse;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #6dd8d4, #f389c0, #d8bd84, #fd8ff5, #fff);
+    background-position: -200%;
+    background-size: 200%;
+    color: #0000;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 68px;
+    margin: 24px 0
+}
+
+@keyframes animated-gradient {
+    to {
+        background-position: 200%
+    }
+}
+
+.menu-bg {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 0 10px 25px
+}
+
+.menu-animation {
+    text-fill-color: #0000;
+    -webkit-text-fill-color: #0000;
+    animation: shine 1s linear infinite;
+    background: linear-gradient(90deg, #ab83ff 20%, #ab08a6 40%, #ab08a6 60%, #ab83ff 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    color: #000
+}
+
+.menu-animation div {
+    font-size: 18px
+}
+
+@keyframes shine {
+    to {
+        background-position: 200%
+    }
+}
+
+.cardBox {
+    box-shadow: 0 2px 10px 0 #0006, 0 2px 25px 0 #00000080;
+    display: grid;
+    height: 46px;
+    margin-bottom: 30px;
+    place-items: center;
+    position: relative;
+    width: 180px
+}
+
+.card-animation,
+.cardBox {
+    border-radius: 20px;
+    overflow: hidden
+}
+
+.card-animation {
+    align-items: center;
+    background: linear-gradient(64.83deg, #30304e 15%, #27283c 60%);
+    box-shadow: inset 0 30px 60px -12px #0006, inset 0 18px 36px -18px #00000080;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    width: 133px;
+    z-index: 5
+}
+
+.cardBox:before {
+    animation: glowing01 5s linear infinite;
+    animation: glowing 3s linear infinite;
+    background: #40e0d0;
+    background: linear-gradient(90deg, #00b1aa, #d7006f, #00ad9b, #ff0080);
+    content: "";
+    height: 40px;
+    position: absolute;
+    transform-origin: center;
+    width: 286px
+}
+
+.card-content {
+    align-items: center;
+    background: radial-gradient(circle at 10% 20%, #455666 0, #222 90%);
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    width: 100%
+}
+
+.arrow-animation {
+    margin-top: 12px;
+    transform: rotate(-40deg);
+    width: 20px
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    margin: 0;
+    padding: 20px 15px 9px
+}
+
+.card-p {
+    font-size: 14px;
+    padding: 12px
+}
+
+@keyframes glowing {
+    0% {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.counter {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center
+}
+
+.counter-panel {
+    background: linear-gradient(90deg, #3c1053, #ad5389);
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    height: 80px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    position: relative;
+    width: 65px
+}
+
+.counter-panel-border:after {
+    animation: rotate 2s linear infinite;
+    background-color: initial;
+    background-image: linear-gradient(90deg, #fff0, #fff 50%, #fff0);
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    content: "";
+    height: 200%;
+    left: -50%;
+    position: absolute;
+    top: -50%;
+    width: 200%;
+    z-index: -2
+}
+
+.counter-text {
+    font-size: 32px
+}
+
+.panel-bottom {
+    bottom: 15px;
+    left: 0;
+    position: absolute;
+    right: 0
+}
+
+.language-dropdown .gt_switcher_wrapper {
+    left: auto !important;
+    position: absolute !important;
+    right: 70px !important;
+    top: 31px !important;
+    z-index: 999999;
+    z-index: 2 !important
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_selected a {
+    align-items: center;
+    border: #0000;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15px;
+    padding: 5px;
+    width: 131px
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_selected {
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 5px
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_selected a:hover {
+    background: #0000
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher {
+    width: 143px
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_selected a:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACISURBVEiJ7dJBCsIwFEXRjjqx7qE76SLspBtwm4K1m7LC6SRCBlVjjYiQB5n9d+//kKoqKfmvoMYRzYZuE7r1s6EWM8Z3JAE+hm77aviAKybsE+A7nHDDkLpRkmQTPFXyEXxFcoklWeCPJFnhkaQPP+Qc3ow+CzyS3C/Jt/mKpEP3FXhJye+yAKg75nUC0RotAAAAAElFTkSuQmCC) !important;
+    background-size: 18px;
+    right: 11px;
+    top: 5px
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher a img {
+    margin: 0 6px 0 0;
+    opacity: 1
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_option {
+    background: #000;
+    border-radius: 5px;
+    width: 141px
+}
+
+.language-dropdown .gt_container--hich1m .gt_switcher .gt_option a {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    line-height: 15px
+}
+
+.gt_container--hich1m .gt_switcher .gt_option a:hover {
+    color: #000
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+    left: -14px !important;
+    right: auto !important;
+    top: 26px !important;
+    transition-delay: 0s
+}
+
+.display-block {
+    display: block !important;
+    padding: 0 15px !important
+}
+
+.display-block p {
+    font-size: 16px;
+    letter-spacing: .5px;
+    margin-bottom: 3px
+}
+
+.cardBoxPanel {
+    margin-bottom: 0
+}
+
+.panel-buy-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px
+}
+
+.cardBoxPanel {
+    height: 50px;
+    width: 203px
+}
+
+.cardBoxPanel .card-animation {
+    width: 145px
+}
+
+.cardBoxPanel .card-content {
+    background: radial-gradient(circle at 10% 20%, #0054a3 0, #222 90%)
+}
+
+@media (device-width:1300px) and (device-height:1200px) and (orientation:landscape) {
+    .language-dropdown .gt_switcher_wrapper {
+        right: 36px !important;
+        top: 102px !important
+    }
+}
+
+@media (max-width:1199px) and (min-width:1024px) {
+    .language-dropdown .gt_switcher_wrapper {
+        right: 38px !important;
+        top: 100px !important
+    }
+}
+
+@media (max-width:1024px) and (min-width:992px) {
+    .menu-bg {
+        padding: 10px
+    }
+    .menu-animation div {
+        font-size: 16px;
+        margin-right: 20px
+    }
+    .language-dropdown .gt_switcher_wrapper {
+        right: 43px !important;
+        top: 104px !important
+    }
+    .md-panel {
+        width: 90% !important
+    }
+    .trade-btn {
+        width: 50%
+    }
+    .counter-panel {
+        height: 66px
+    }
+    .panel-bottom {
+        font-size: 14px
+    }
+    .counter-text {
+        font-size: 28px
+    }
+}
+
+@media (max-width:991px) {
+    .menu-bg {
+        background: #fff;
+        padding: 0 0 0 15px
+    }
+    .menu-animation div {
+        font-size: 16px;
+        margin-right: 20px
+    }
+    .trade-btn {
+        width: 100% !important
+    }
+    .sm-wrap {
+        flex-wrap: wrap;
+        gap: 10px
+    }
+    .language-dropdown .gt_switcher_wrapper {
+        right: 42px !important;
+        top: 80px !important
+    }
+    .md-panel {
+        margin: 0 auto;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 90% !important
+    }
+    .counter-text {
+        font-size: 25px
+    }
+    .counter-panel {
+        height: 66px
+    }
+    .panel-bottom {
+        font-size: 14px
+    }
+}
+
+@media (max-width:768px) {
+    .menu-bg {
+        background: #000;
+        padding: 0
+    }
+    .language-dropdown .gt_switcher_wrapper {
+        right: 23px !important
+    }
+}
+
+@media (max-width:767px) {
+    .menu-bg {
+        background: #000;
+        padding: 0
+    }
+    .xs-reverse {
+        flex-direction: column-reverse !important
+    }
+    .card-content {
+        top: 45%
+    }
+    .cardBox {
+        height: 44px;
+        width: 158px
+    }
+    .card-animation {
+        width: 112px
+    }
+    .card-title {
+        padding: 12px 15px 9px
+    }
+    .arrow-animation {
+        margin-top: 7px
+    }
+    .panel-bottom {
+        font-size: 14px
+    }
+    .counter {
+        gap: 5px;
+        padding: 0 5px
+    }
+    .counter-panel {
+        height: 70px;
+        margin-right: 0
+    }
+    .language-dropdown .gt_switcher_wrapper {
+        right: 20px !important;
+        top: 67px !important
+    }
+    .counter-text {
+        font-size: 25px;
+        width: 38px
+    }
+    .cardBoxPanel .card-animation {
+        width: 115px
+    }
+}
+
+/*# sourceMappingURL=main.165efbca.css.map*/
